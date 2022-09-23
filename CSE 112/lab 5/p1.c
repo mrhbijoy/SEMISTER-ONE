@@ -14,7 +14,7 @@ int main(){
     scanf("%d",&b);
     
     
-    printf("\nBefore swapping: n1 = %d, n2 = %d\n",a,b);
+    printf("\nBefore swapping: n1 = %d, n2 = %d 22\n",a,b);
     swap(a,b);
     
     return 0;

@@ -1,7 +1,6 @@
-//hello world program in c
-#include <stdio.h>
+#include<stdio.h>
 int main()
-{
-printf("Hello World");
+{ printf("Hello World! Bijoy");
 return 0;
 }
+

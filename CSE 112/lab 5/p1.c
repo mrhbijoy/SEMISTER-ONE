@@ -5,6 +5,7 @@ void swap(int a,int b){
     a=b;
     b=temp;
     printf("After swapping: n1 = %d, n2 = %d",a,b);
+
 }
 int main(){
     int a,b;

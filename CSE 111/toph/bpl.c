@@ -2,28 +2,30 @@
 
 int main()
 {
-    int i, count = 0, j;
-    char c;
-    for (j = 1; j <= 9; j++)
-    {
-        scanf("%c", c);
-        if (c == '1' ||c == '0'|| c == '2' || c == '3' || c == '4' || c == '5' || c == '6' ||  c == 'O')
-        {
-            count++;
-        }
-    }
-    count -= 9;
-    if (count < 6)
-    {
-        printf("%d BALLS", count);
-    }
-    if (count == 6)
-    {
-        printf("1 OVER");
-    }
-    if (count > 6)
-    {
-        count = count - 6;
-        printf("1 OVER %d BALLS", count);
-    }
+	int t,count,i,over,ball;
+	char s[105];
+	scanf("%d", &t);
+	while(t--){
+		scanf("%s ", s);
+		count = 0;
+		i = 0;
+		while(s[i] != '\0'){
+			if(s[i] != 'N' && s[i] != 'W' && s[i] != 'D'){
+				count++;
+			}
+			i++;
+		}
+		over = count / 6;
+		ball = count % 6;
+		if(ball == 0 && over != 0)
+			printf("%d %s\n", over, (over>1)? "OVERS" : "OVER");
+		else if(over == 0 && ball != 0)
+			printf("%d %s\n", ball, (ball>1)? "BALLS" : "BALL");
+		else
+			printf("%d %s %d %s\n", over, (over>1)? "OVERS" : "OVER", ball, (ball>1)? "BALLS" : "BALL");
+	}
+
+	
+	
+	return 0;
 }

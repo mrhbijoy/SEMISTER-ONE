@@ -1,12 +1,33 @@
-#include<stdio.h>
-void Hello() {
-    printf("Hello World\n");
+#include <stdio.h>
+#include <cstring>
+void mode(){
+    char mode[10];
+    while(1){
+        printf("Enter your mood: ");
+        scanf("%s",mode);
+        if(strcmp(mode,"happy")==0 || strcmp(mode,"Happy")==0){
+            printf("You are happy now.Do whatever you want.");
+            break;
+        }
+        else{
+            printf("Read Humayun Ahmed's Books\n");
+        }
+    }
 }
-void Goodbye() {
-    printf("Goodbye World\n");
-}
-int main() {
-    Hello();
-    Goodbye();
-    return 0;
+
+
+//make the mode function more efficient and short
+void newMode(){
+    char mode[10];
+    while(1){
+        printf("Enter your mood: ");
+        scanf("%s",mode);
+        if(strcmp(mode,"happy")==0 || strcmp(mode,"Happy")==0){
+            printf("You are happy now.Do whatever you want.");
+            break;
+        }
+        else{
+            printf("Read Humayun Ahmed's Books\n");
+        }
+    }
 }
